@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package pr.iceworld.fernando.protobuf.proto;
+option java_package = "pr.iceworld.fernando.protobuf.proto";
+//option java_multiple_files = true;
+option java_outer_classname = "PhoneProto";
+
+message Phone {
+  int32 id = 1;
+  string value = 2;
+  Brand brand = 3;
+}
+
+enum Brand {
+  APPLE = 0;
+  SAMSUNG = 1;
+  HUAWEI = 2;
+  MI = 3;
+  reserved 4 to 19;
+}
